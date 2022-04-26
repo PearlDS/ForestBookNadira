@@ -7,8 +7,8 @@ import java.util.*;
 
 public class ForestNoteBook {
 
-    private static int plantCount;
-    private static int animalCount;
+    private int plantCount;
+    private  int animalCount;
     private List<Carnivore> carnivores = new ArrayList<>();
     private List<Omnivore> omnivores = new ArrayList<>();
     private List<Herbivore> herbivores = new ArrayList<>();
@@ -19,29 +19,24 @@ public class ForestNoteBook {
     public ForestNoteBook() {
     }
 
-    {
-        plantCount++;
-    }
-
-    {
-        animalCount++;
-    }
+ 
 
 
-    public static void setPlantCount(int plantCount) {
+    public void setPlantCount(int plantCount) {
 
         ForestNoteBook.plantCount = plantCount;
     }
 
-    public static int getPlantCount() {
+    public  int getPlantCount() {
         return plantCount;
     }
 
-    public static void setAnimalCount(int animalCount) {
+    public  void setAnimalCount(int animalCount) {
         ForestNoteBook.animalCount = animalCount;
     }
 
-    public static int getAnimalCount() {
+    public  int getAnimalCount() {
+       // animalCount = animals.size();
         return animalCount;
     }
 
@@ -71,7 +66,15 @@ public class ForestNoteBook {
     }
 
     public void addAnimal(Animal animal) {
+        if(!animals.contains(animal){
         animals.add(animal);
+        animalCount++;
+            
+            if( animal instanceOf Carnivore){
+             carnivores.add(animal);   
+            }
+            
+        }
 
     }
 
